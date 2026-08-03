@@ -33,15 +33,21 @@ main()
 
 app.use(
   cors({
-    origin: "https://sabina701.github.io",
+    origin: "https://sabina701.github.io/Ecommerce",
     credentials: true,
   }),
 );
+app.set("trust proxy", 1);
 app.use(
   session({
-    secret: "mysupersecretkey",
+    secret: process.env.SESSION_SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
+    cookie: {
+      secure: true,
+      sameSite: "none",
+      httpOnly: true,
+    },
   }),
 );
 
