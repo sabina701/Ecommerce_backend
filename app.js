@@ -33,7 +33,7 @@ main()
 
 app.use(
   cors({
-    origin: "https://sabina701.github.io/Ecommerce",
+    origin: "https://sabina701.github.io",
     credentials: true,
   }),
 );
