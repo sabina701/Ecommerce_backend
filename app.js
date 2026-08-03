@@ -24,9 +24,16 @@ main()
   })
   .catch((err) => console.log(err));
 
+// app.use(
+//   cors({
+//     origin: ["http://localhost:5173", "https://sabina701.github.io"],
+//     credentials: true,
+//   }),
+// );
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://sabina701.github.io"],
+    origin: "https://sabina701.github.io",
     credentials: true,
   }),
 );
